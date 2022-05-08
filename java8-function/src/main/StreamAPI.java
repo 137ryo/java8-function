@@ -30,6 +30,17 @@ public class StreamAPI {
 		        .filter(i -> i % 2 == 0) // 中間操作
 		        .forEach(i -> System.out.println(i)); // 終端操作
 
+		/**
+		 * map
+		 * 
+		 * 引数には T -> U となるラムダ式を渡す
+		 * 要素の変換を行う
+		 * 複数繋げて書くこともできる
+		 */
+		List<Integer> integerList2 = Arrays.asList(1, 2, 3, 4, 5);
+		integerList2.stream() // streamの取得
+		        .map(i -> i * 2) // 中間操作
+		        .forEach(i -> System.out.println(i)); // 終端操作
 	}
 
 }
